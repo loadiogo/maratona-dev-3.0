@@ -22,10 +22,19 @@ body {
   background-color: #f9f9f9;
 }
 
+h1,
+h2 {
+  color: #000000cc;
+}
+
 /* TITULOS */
 header h1,
 main h2 {
   margin-bottom: 70px;
+}
+
+main h2 span {
+  color: #ff4f4f;
 }
 
 .form h2 {
@@ -68,6 +77,15 @@ header button {
   font-weight: bold;
 }
 
+.logo {
+  width: 120px;
+  margin: 70px 0;
+}
+
+header p {
+  font-size: 14px;
+}
+
 /* FORM */
 section.form {
   display: grid;
@@ -102,12 +120,58 @@ form input {
   background-color: transparent;
 }
 
+/* o placeholder no input é um pseudo element */
+form input::placeholder {
+  color: #ffffffaa;
+}
+
+form button {
+  font-weight: bold;
+  /* border: none; */
+
+  background-color: #ffffff;
+}
+
 /* MAIN */
 main .donors {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.blood {
+  color: #ff4f4f;
+  font-weight: bold;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.blood::before {
+  content: "";
+  background-color: #ff4f4f11;
+
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+
+  /* fazer a gotinha */
+  border-radius: 50%;
+  border-top-right-radius: 0;
+
+  transform: rotate(-45deg);
+}
+
+.donor p {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+/* footer */
 footer {
   margin-top: auto;
   padding: 16px;
